@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --font:'Outfit', sans-serif;
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hwb(215 8% 76%);
+    --hr-line: hsl(215, 32%, 27%);
+    --anchor-color: hsl(0, 0%, 100%);
+    --price-color:hsl(178, 100%, 50%);
+    --main-p-color: hsl(215, 51%, 70%);
+    --bg-eye-color: hsla(178, 100%, 50%,0.2);
+}
+
+body {
+    font-family:var(--font);
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 20px;    
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--anchor-color);
+}
+
+.nfts {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: var(--bg-eye-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nfts:hover .overlay{
+    opacity: 1;
+}
+
+a:hover {
+    color: var(--price-color);
+}
+
+#nft{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.nft_details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.creator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+}
+
+.creator img {
+    width: 10%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+
+.main_p {
+    color: var(--main-p-color);
+}
+
+.price {
+    color: var(--price-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.time {
+    color: var(--main-p-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.credit {
+    color: var(--main-p-color);
+}
+
+hr {
+    color: var(--hr-line);
+}
+
+footer {
+    color: var(--main-p-color);
+    margin-top: 30px; 
+    width: 67%; 
+    text-align: center  ;
+}
+
+footer a {
+    color: var(--anchor-color);
+}
+
+@media (min-width: 1440px) {
+    .card {
+        width: 20%;
+    }
+}
